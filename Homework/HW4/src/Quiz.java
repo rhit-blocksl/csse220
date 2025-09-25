@@ -8,5 +8,25 @@
   * 
  */
 public class Quiz {
+    private int id;
+    private Question[] questions;
+    public Quiz(int id, Question[] questions){
+    this.id = id;
+    this.questions = questions;
+    }
+    public int getId(){
+    return id;
+    }
+    public Question[] getQuestions(){
+        return questions;
+    }
+
+    public void displayQuiz(){
+        System.out.println("Quiz ID: " + id);
+        for(int i = 0; i < questions.length; i++) {
+            System.out.println(questions[i]);
+        }
+
+    }
 
 }

@@ -39,7 +39,13 @@ public class MyBigInt extends BigInteger {
      * @param args command-line arguments
      */
     public static void main(String[] args) {
-        // TODO: Add code snippets here for testing
+        BigInteger bi1 = new BigInteger("123456789");
+        MyBigInt bi2 = new MyBigInt("123,456,789");
+        System.out.println(bi1.equals(bi2));
+        System.out.println(bi2.equals(bi1));
+
+
+
     }
 
 }

@@ -7,5 +7,22 @@
   * 
  */
 public class Question {
+    private int id;
+    private String text;
+    public Question(int id, String text){
+        this.id = id;
+        this.text = text;
+    }
+    public int getId() {
+        return id;
+    }
+
+    public void setText(String newText) {
+        this.text = newText;
+    }
+
+    public String toString() {
+        return "Question [" + id + "]:" + text;
+    }
 
 }

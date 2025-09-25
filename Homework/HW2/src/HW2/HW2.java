@@ -7,7 +7,7 @@ import java.util.ArrayList;
  ***************************************************************************************
  *         REQUIRED HELP CITATION
  *
- *         TODO: cite your help here or say "only used CSSE220 materials"
+ *         only used CSSE220 materials
  ***************************************************************************************
  *
  * <dl>
@@ -50,8 +50,22 @@ public class HW2 {
 	 * Requires if statements, strings
 	 */
 	public static boolean endsWithUpperCaseLetter(String input) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
-	}
+        if(input.isEmpty()){
+            return false;
+        }
+
+        char lastChar = input.charAt(input.length() -1);
+        return Character.isUpperCase(lastChar);
+
+//        int k = input.length();
+//        for(int i; i <= k; i++) {
+//            if (i = k) {
+//                char specificChar = input.charAt(i);
+//            }
+//           if(Character.isUpperCase(specificChar);
+//               return true;
+//        }
+    }
 
 	/**
 	 * Given two strings of the same length, returns the index at which the strings
@@ -81,8 +95,18 @@ public class HW2 {
 	 * Requires: for loops or while loops, strings
 	 */
 	public static int firstDifference(String one, String two) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
-	}
+        int k = one.length();
+        int i = 0;
+        while (i < k && one.charAt(i) == two.charAt(i) ){
+            i++;
+        }
+       if (i == k) {
+            return -1;
+        } else {
+            return i;
+        }
+
+    }
 
 	/**
 	 * Takes a string that is all Ts or Fs.
@@ -99,8 +123,19 @@ public class HW2 {
 	 * @return a score
 	 */
 	public static int footballScore(String input) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
-	}
+        int total = 0;
+        for(int i = 0; i < input.length(); i ++){
+            if (input.charAt(i) =='F')
+            {
+            total += 3;}
+            if (input.charAt(i) =='T')
+            {
+                total += 7;
+            }
+        }
+            return total;
+
+    }
 
 	/**
 	 * Given one string, return the most common character.
@@ -119,8 +154,24 @@ public class HW2 {
 	 * Requires: for loops, strings
 	 */
 	public static char mostCommonCharacter(String input) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
-	}
+		int maxCount = 0;
+        char mostCommon = input.charAt(0);
+        for(int i = 0; i < input.length(); i++){
+            char currentChar = input.charAt(i);
+            int total = 0;
+            for(int j = 0; j < input.length(); j++) {
+                if (input.charAt(j) == currentChar){
+                 total++;
+                }
+            }
+            if (total > maxCount){
+                maxCount = total;
+                mostCommon = currentChar;
+            }
+
+        }
+        return mostCommon;
+    }
 
 
 
@@ -144,8 +195,19 @@ public class HW2 {
 	 *
 	 */
 	public static ArrayList<String> doubleDouble(ArrayList<String> input) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
-	}
+        ArrayList<String> output = new ArrayList<String>();
+
+        for(int i = 0; i < input.toArray().length; i++ ) {
+            String currentString = input.get(i);
+            if (currentString.equals("double")) {
+                output.add("double");
+                output.add("double");
+            } else {
+                output.add(input.get(i));
+            }
+        }
+    return output;
+    }
 
 	/**
 	 * Given a string, return all 3 character substrings of that string in an
@@ -159,7 +221,15 @@ public class HW2 {
 	 * threeCharacterStrings(["ab"])   returns []
 	 */
 	public static ArrayList<String> threeCharacterStrings(String input) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
+        ArrayList<String> output = new ArrayList<String>();
+        if (input.length() < 3){
+            return output;
+        }
+        for(int i = 0; i < input.length() - 2; i++ ){
+            output.add(input.substring(i, i+ 3));
+            // had to ask friend no clue how to do substring
+        }
+        return output;
 	}
 
 	/**
@@ -186,6 +256,21 @@ public class HW2 {
 	 * you will not return a new list, but modify the strings list
 	 */
 	public static void truncateStringsAtX(ArrayList<String> strings) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
-	}
+        for(int i =0; i < strings.toArray().length; i++) {
+            String first = strings.get(i);
+            String end = "";
+
+            for(int j = 0; j < first.length(); j++){
+                char c = first.charAt(j);
+                end += c;
+                if(c == 'X'){
+                    break;
+                }
+
+            }
+            if (end.contains("X")){
+                strings.set(i, end);
+            }
+        }
+    }
 }

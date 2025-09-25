@@ -9,27 +9,37 @@ import java.util.HashMap;
  *************************************************************************************** 
  *         REQUIRED HELP CITATION
  * 
- *         TODO: cite your help here or say "only used CSSE220 materials"
+ *         "used CSSE220 materials and asked a friend who
+ *         took this class for some help in the beginning because i was confused
+ *         on how to start"
  *************************************************************************************** 
  */
 public class QuizMain {
 	
 	//TODO add instance variables here
+    private Question[] questions = new Question[5];
+    private Quiz[] quizes = new Quiz[3];
 	
 	public QuizMain() {
 		// TODO In order to demonstrate functionality, please follow the TODOs below
 		// You will have to create questions and quizzes when a QuizMain is created
-		
-		
-		// TODO 1 Create five questions (can be silly/basic questions) use id 1,2,3,4,5 ...
-	
 
-		// TODO 2 Create three or more quizzes  use id 1,2,3...
+		
+		// TODO 1 Create five questions (can be silly/basic questions) use id 1,2,3,4,5 ..
+        questions[0] = new Question(1, "What is your favotite animal?");
+        questions[1] = new Question(2, "What is your favotite color?");
+        questions[2] = new Question(3, "What is your favotite minion?");
+        questions[3] = new Question(4, "What is your favotite shape?");
+        questions[4] = new Question(5, "What is your favotite snack?");
+        // TODO 2 Create three or more quizzes  use id 1,2,3...
 		//      (One quiz should share at least one question with another )
+        quizes[0] = new Quiz(1, new Question[]{questions[0], questions[1],questions[2] });
+        quizes[1] = new Quiz(2, new Question[]{questions[2], questions[3],questions[4] });
+        quizes[2] = new Quiz(3, new Question[]{questions[0], questions[4]});
 
-		
-		
-	}
+
+
+    }
 	
 	
 	
@@ -73,8 +83,18 @@ public class QuizMain {
 	 * 
 	 * @param quizId
 	 */
+
+
+
 	public void handleDisplayQuiz(int quizId) {
-		//TODO complete this method
+        for(int i = 0; i < quizes.length; i++){
+            if (quizes[i].getId() == quizId){
+                quizes[i].displayQuiz();
+                return;
+
+            }
+
+        }
 	}
 	
 	/**
@@ -85,7 +105,11 @@ public class QuizMain {
 	 * @param questionData
 	 */
 	public void handleUpdateQuizQuestion(int questionId, String questionData) {
-		//TODO complete this method
-	}
-
+        for (int i = 0; i < questions.length; i++) {
+            if (questions[i].getId() == questionId) {
+                questions[i].setText(questionData);
+                return;
+            }
+        }
+    }
 }

@@ -4,7 +4,7 @@ package HW1;
  ****************************************************************************************
  *         REQUIRED HELP CITATION
  *
- *         TODO: cite your help here or say "only used CSSE220 materials"
+ *         done: "only used CSSE220 materials"
  ****************************************************************************************
  *
  * <dl>
@@ -60,7 +60,7 @@ public class HW1 {
 	 * @return
 	 */
 	public static boolean secondDigit5(int input) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
+         return((input / 10) % 10) == 5;
 	}
 
 
@@ -82,9 +82,22 @@ public class HW1 {
 	 *
 	 * Requires: for loops
 	 */
+
+
 	public static double pow(int num, int power) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
-	}
+        double total = 1.0;
+        if(power >= 0) {
+            for (int i = 0; i < power; i++) {
+                total *= num;
+            }
+        } else {
+            for (int i = 0; i < -power; i++) {
+                total *= num;
+            }
+            total = 1.0 / total;
+        }
+        return total;
+    }
 
 	/**
 	 * Creates an array of all the powers of two, up to (and including) the given
@@ -101,7 +114,18 @@ public class HW1 {
 	 * Requires: arrays, for loops
 	 */
 	public static int[] powersOfTwo(int maxExponent) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
+        if(maxExponent < 0) {
+            return new int[0];
+        }
+        int count = maxExponent + 1;
+        int[] result = new int[count];
+        for (int i = 0; i <= maxExponent; i++) {
+            double c = pow(2, i);
+            result[i] = (int)c;
+        }
+        return result;
+
+
 	}
 
 	/**
@@ -117,8 +141,17 @@ public class HW1 {
 	 * Requires: arrays, for loops
 	 */
 	public static int[] maxArray(int[] one, int[] two) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
-	}
+        int[] result = new int[one.length];
+        for(int i = 0;i < one.length; i++){
+            if (one[i] > two[i]){
+                result[i] = one[i];
+            }
+            else{
+                result[i] = two[i];
+            }
+        }
+        return result;
+    }
 
 	/**
 	 * Takes a char array that is all Ts or Fs.
@@ -135,8 +168,21 @@ public class HW1 {
 	 * @return a score
 	 */
 	public static int footballScore(char[] input) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
-	}
+        int total = 0;
+        for(int i = 0; i < input.length; i ++){
+            if (input[i] =='F')
+            {
+                total += 3;
+            }
+            if (input[i] =='T')
+            {
+                total += 7;
+            }
+//            System.out.println(total);
+        }
+        return total;
+
+        }
 
 	/**
 	 * Given a particular point in the coordinate plane, compute the point's
@@ -152,6 +198,9 @@ public class HW1 {
 	 * cite your source in the help citation at the top of the file.
 	 */
 	public static double distanceFromOrigin(double x, double y) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
-	}
+        double z;
+        z = x * x + y * y;
+        return (Math.sqrt(z));
+
+    }
 }

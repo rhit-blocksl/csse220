@@ -7,14 +7,20 @@ public class ArrayIteration {
 
     public static void main(String[] args) {
         // uncomment each to test it
-        // exampleOne();
-        // exampleTwo();
+        //exampleOne();
+        exampleTwo();
         // exampleThree();
     }
 
     private static void exampleOne() {
-        int[] arr = {}; // TODO: add some values for testing
+        int[] arr = new int[5]; // TODO: add some values for testing
         int sum = 0;
+        int i;
+        for(i = 0; i < arr.length; i++){
+            arr[i] = i + 1;
+            sum+= arr[i];
+        }
+
         
         // TODO: add your code here
         
@@ -22,13 +28,20 @@ public class ArrayIteration {
     }
 
     private static void exampleTwo() {
-        int[] triangles = new int[10]; // TODO: consider changing 10 during testing
-        
+        int[] triangles = new int[5]; // TODO: consider changing 10 during testing
+        int i;
+        int z = 1;
+        for(i = 1; i < triangles.length; i++) {
+            triangles[i] = z + i;
+            z++;
+        }
+
+
         // TODO: add your code here
 
         // This prints the results so you can check your work
-        for (int i = 0; i < triangles.length; i++) {
-            System.out.println("triangles[" + i + "] = " + triangles[i]);
+        for (int j = 0; j < triangles.length; j++) {
+            System.out.println("triangles[" + j + "] = " + triangles[j]);
         }
     }
 

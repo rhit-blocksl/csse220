@@ -29,6 +29,12 @@ public class AnimalShelterMain {
         this.animalsByName.put(newAnimal.getName(), newAnimal);
     }
 
+//    public void removeAnimal(Animal removed) {
+//        Animal ID = this.animals.get(ID);
+//        this
+//        this.removed.(AnimalID.getName(), delete);
+//    }
+
     /**
      * String representation of this shelter with all its animals. 
      */
@@ -49,6 +55,9 @@ public class AnimalShelterMain {
             animal.setWeight(newWeight);
         }
     }
+
+
+
 
     /**
      * Retrieve an Animal with the given name. 
@@ -139,7 +148,20 @@ public class AnimalShelterMain {
                 System.out.println("No animal found with ID: " + id);
             }
             
-        } else if (command.equals("list all")) {
+        }
+//        else if (command.equals("Remove Animal")) {
+//            System.out.print("Enter animal ID to search: ");
+//            int ID = scanner.nextInt();
+//
+//            Animal found = getAnimalByID(ID);
+//            if (found != null) {
+//                System.out.println("Animal removed: " + removed);
+//            } else {
+//                System.out.println("No animal found with ID: " + ID);
+//            }
+//
+//        }
+        else if (command.equals("list all")) {
             if (animals.isEmpty()) {
                 System.out.println("No animals in the shelter.");
             } else {

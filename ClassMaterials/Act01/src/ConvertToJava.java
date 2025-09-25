@@ -10,12 +10,21 @@ public class ConvertToJava {
         // Example: 
         // myFunction(25.0); // Modify this to test your function. 
 
-        // or, if you want to return and print some value:
+        // or, if you  want to return and print some value:
         // [datatype] result = myFunction([arguments]);
         // System.out.println(result);
-    }
+//        i = 1
+//        while i < 6:
+//        print(i)
+//        i += 1
 
-    // TODO: Add your converted function here. 
+    //
+    int i = 1;  // start with i = 1
+        while(i< 6){  // loop while i is less than 6
+        System.out.println(i);  // print i
+        i++;  // increment i by 1
+    }
+}
 
     // === EXAMPLE ===
     // Python version: 

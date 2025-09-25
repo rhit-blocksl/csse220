@@ -9,12 +9,19 @@ public class Point {
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
+
     }
 
     public static void main(String[] args) {
         Point a = new Point(0, 0);
         Point b = new Point(3, 4);
-        // System.out.println(Point.distanceBetween(a, b));
-        // System.out.println(a.distanceTo(b));
+//        System.out.println(Point.distanceBetween(a, b));
+//        System.out.println(a.distanceTo(b));
     }
+//
+//    private static int distanceBetween(Point a, Point b) {
+//        float distX =  a.x - b.x;
+//        float distY = a.y - b.y;
+//        return (Math.sqrt(distY * distY + distX * distX));
+//    }
 }

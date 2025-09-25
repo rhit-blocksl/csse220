@@ -19,7 +19,7 @@ public class DebugMe {
 			nFact = nFact*i;
 		}
 		int nMinusKFact = 1;
-		for(int j = 2; j <= n - k; j++) {
+		for(int j = 2; j <= n - k ; j++) {
 			nMinusKFact = nMinusKFact*j;
 		}
 		
@@ -42,7 +42,7 @@ public class DebugMe {
 	public static String uppercaseIfExclaimation(String sentence) {
 
 		if(sentence.charAt(sentence.length() - 1) == '!') {
-			sentence.toUpperCase();
+			sentence = sentence.toUpperCase();
 		} 
 		return sentence;
 	}

@@ -4,7 +4,7 @@ package HW0;
  **************************************************************************************** 
  *         REQUIRED HELP CITATION
  * 
- *         TODO: cite your help here or say "only used CSSE220 materials"
+ *         done: we did in class
  ****************************************************************************************
  * 
  * <dl> 
@@ -39,9 +39,10 @@ public class HW0 {
 	 * 
 	 * addFraction(1,2,1,4) returns 0.75
 	 */
+
 	public static double addFraction(int num1, int den1, int num2, int den2) {
-		// TODO: Implement this method
-		throw new UnsupportedOperationException("Not yet implemented.");
+		return (double)num1 / den1 + (double)num2 / den2;
+
 	}
 	
 	/**
@@ -57,9 +58,9 @@ public class HW0 {
 	 * @param y - an integer
 	 * @return true if x*y is a multiple of four, false otherwise
 	 */
+
 	public static boolean isProductAMultipleOfFour(int x, int y) {
-		// TODO: Implement this method
-		throw new UnsupportedOperationException("Not yet implemented.");
+		return (x*y % 4 == 0);
 	}
 
 } // end class HW0

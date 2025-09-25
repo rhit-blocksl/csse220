@@ -23,16 +23,17 @@ public class WelcomeToJava {
      * to see a prettier version.)
      * 
      * @param args - command-line arguments, not used here
+     *
      */
     public static void main(String[] args) {
         // This is an in-line Java comment. We use these to add short explanations. 
 
         // === Model 1 ===
-        // Predict what will happen, then run the program and see. 
-        int x = 3;
-        int xSquared = x * x;
-        System.out.println(x);
-        System.out.println(xSquared);
+//        // Predict what will happen, then run the program and see.
+//        int x = 3;
+//        int xSquared = x * x;
+//        System.out.println(x);
+//        System.out.println(xSquared);
 
         // === Model 2 ===
         /*
@@ -45,9 +46,9 @@ public class WelcomeToJava {
          * (Aside: This is a multi-line comment. 
          * You can use these for longer explanations.)
          */
-        // int y = 15 - 4 / 2 * 3 + 1;
-        // System.out.println(y);
-        
+//         int y = 15 - 4 / 2 * 3 + 1;
+//         System.out.println(y);
+//
         // Again, predict the output, then uncomment and run. 
         // int dividend = 7;
         // int divisor = 2;
@@ -55,23 +56,23 @@ public class WelcomeToJava {
         // System.out.println(dividend % divisor); 
 
         // Once again, predict the output, then uncomment and run. 
-        // System.out.println(11. / 4);
-        // System.out.println(13 / 4.);
-        // System.out.println(15 / 4);
-        // System.out.println(14.0 / 4);
-        // System.out.println(9 / 4);
+//         System.out.println(11. / 4);
+//         System.out.println(13 / 4.);
+//         System.out.println(15 / 4);
+//         System.out.println(14.0 / 4);
+//         System.out.println(9 / 4);
 
         // Once again, predict the output, then uncomment and run.
-        // int dollars; 
-        // int cents; 
-        // dollars = 2;
-        // System.out.println(dollars);
-        // System.out.println(cents); // What goes wrong here? 
-        // dollars = 3;
-        // dollars = 4;
-        // cents = 49;
-        // System.out.println(dollars);
-        // System.out.println(cents);
+//         int dollars;
+//         int cents;
+//         dollars = 2;
+//         System.out.println(dollars);
+//         System.out.println(cents); // What goes wrong here?
+//         dollars = 3;
+//         dollars = 4;
+//         cents = 49;
+//         System.out.println(dollars);
+//         System.out.println(cents);
         
     }
 
