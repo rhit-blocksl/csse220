@@ -47,6 +47,7 @@ public class BadFrac {
 	
 	
 	// TODO 1: Write some unit tests in BadFracTest.java to determine the problem
+
 	/**
 	 * The method should return true when the fraction has been reduced to its lowest terms
 	 * 
